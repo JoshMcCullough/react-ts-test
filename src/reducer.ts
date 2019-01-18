@@ -32,7 +32,7 @@ export default (state: State = INITIAL_STATE, action: ProfileAction): State => {
             loading: false,
         };
 
-        case getType(Actions.getProfilesRequest): return {
+        case getType(Actions.getProfilesFailure): return {
             ...state,
             errorMessage: action.payload.error.message,
             // ERROR: Property 'payload' does not exist on type 'EmptyAction<string> | PayloadAction<string, { profiles: Profile[]; }> | PayloadAction<string, { error: ApiErrorResponse; }>'.
